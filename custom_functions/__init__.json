@@ -1,0 +1,10 @@
+{
+    "create_time": "2022-08-15T20:02:46.860589+00:00",
+    "custom_function_id": "29c364e5f0e60b5247549b716549a7cd614c7028",
+    "description": "Init helper for Global_Util. Effectively turns our helper directory into a proper python module",
+    "draft_mode": false,
+    "inputs": [],
+    "outputs": [],
+    "platform_version": "5.3.1.84890",
+    "python_version": "3"
+}

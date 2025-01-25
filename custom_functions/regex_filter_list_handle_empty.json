@@ -1,0 +1,43 @@
+{
+    "create_time": "2024-01-23T14:37:13.700459+00:00",
+    "custom_function_id": "0080091ddddbf4ef7752c9680308b422d5fc7d0a",
+    "description": "Filter values in a list using a regex and either keep or drop values that match, depending on the action parameter.",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "*"
+            ],
+            "description": "The list of items to filter using regex",
+            "input_type": "list",
+            "name": "input_list",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "The regular expression to use to filter the list",
+            "input_type": "item",
+            "name": "regex",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "Either 'keep' or 'drop' to specify what to do with the items that match the regular expression. The default is 'keep'.",
+            "input_type": "item",
+            "name": "action",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [
+                "*"
+            ],
+            "data_path": "item",
+            "description": "List of output items"
+        }
+    ],
+    "outputs_type": "list",
+    "platform_version": "6.2.0.355",
+    "python_version": "3"
+}

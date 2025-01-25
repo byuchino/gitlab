@@ -1,0 +1,29 @@
+{
+    "create_time": "2024-01-17T22:07:14.581464+00:00",
+    "custom_function_id": "b6646bc39752e42ef8de7411bd099d34ac2549e8",
+    "description": "",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "*"
+            ],
+            "description": "",
+            "input_type": "list",
+            "name": "domain_list",
+            "placeholder": "list of domain names"
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [
+                "*"
+            ],
+            "data_path": "item",
+            "description": ""
+        }
+    ],
+    "outputs_type": "list",
+    "platform_version": "6.2.0.355",
+    "python_version": "3"
+}

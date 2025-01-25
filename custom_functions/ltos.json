@@ -1,0 +1,24 @@
+{
+    "create_time": "2023-02-28T23:29:46.540748+00:00",
+    "custom_function_id": "bf126f6dd41a67d52478a7990d82b152bcc02aab",
+    "description": "list to string",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "item",
+            "name": "input_list",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "output_string",
+            "description": ""
+        }
+    ],
+    "platform_version": "5.3.1.84890",
+    "python_version": "3"
+}

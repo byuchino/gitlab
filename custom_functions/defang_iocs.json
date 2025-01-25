@@ -1,0 +1,26 @@
+{
+    "create_time": "2022-12-17T01:02:07.769554+00:00",
+    "custom_function_id": "a6ba2ceaabb1fc970e672823d598fd50d41fce93",
+    "description": "This CF will defang the IOCs passed to it.",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "*"
+            ],
+            "description": "",
+            "input_type": "list",
+            "name": "ioc_list",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "defanged_ioc.*.item",
+            "description": ""
+        }
+    ],
+    "platform_version": "5.3.1.84890",
+    "python_version": "3"
+}

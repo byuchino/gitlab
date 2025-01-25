@@ -1,0 +1,389 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Uncategorized",
+    "coa": {
+        "data": {
+            "description": "Find all artifacts with tag, \"saa_pending\".  If there are none, remove the CONTAINER tag, \"saa_pending\".  Otherwise, add the CONTAINER tag, \"saa_pending\"",
+            "edges": [
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_12_to_port_13",
+                    "sourceNode": "12",
+                    "sourcePort": "12_out",
+                    "targetNode": "13",
+                    "targetPort": "13_in"
+                },
+                {
+                    "id": "port_14_to_port_1",
+                    "sourceNode": "14",
+                    "sourcePort": "14_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_0_to_port_17",
+                    "sourceNode": "0",
+                    "sourcePort": "0_out",
+                    "targetNode": "17",
+                    "targetPort": "17_in"
+                },
+                {
+                    "id": "port_17_to_port_12",
+                    "sourceNode": "17",
+                    "sourcePort": "17_out",
+                    "targetNode": "12",
+                    "targetPort": "12_in"
+                },
+                {
+                    "id": "port_13_to_port_14",
+                    "sourceNode": "13",
+                    "sourcePort": "13_out",
+                    "targetNode": "14",
+                    "targetPort": "14_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_12_to_port_18",
+                    "sourceNode": "12",
+                    "sourcePort": "12_out",
+                    "targetNode": "18",
+                    "targetPort": "18_in"
+                },
+                {
+                    "id": "port_18_to_port_19",
+                    "sourceNode": "18",
+                    "sourcePort": "18_out",
+                    "targetNode": "19",
+                    "targetPort": "19_in"
+                },
+                {
+                    "id": "port_19_to_port_1",
+                    "sourceNode": "19",
+                    "sourcePort": "19_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                }
+            ],
+            "hash": "8d9d9a0a817b9c8643713943ba2a897869bdf8d7",
+            "nodes": {
+                "0": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_start",
+                        "id": "0",
+                        "type": "start"
+                    },
+                    "errors": {},
+                    "id": "0",
+                    "type": "start",
+                    "warnings": {},
+                    "x": 1000,
+                    "y": 359.99999999999966
+                },
+                "1": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_finish",
+                        "id": "1",
+                        "type": "end"
+                    },
+                    "errors": {},
+                    "id": "1",
+                    "type": "end",
+                    "warnings": {},
+                    "x": 1000,
+                    "y": 1020
+                },
+                "12": {
+                    "data": {
+                        "advanced": {
+                            "customName": "Check List Length",
+                            "customNameId": 0,
+                            "join": [],
+                            "scope": "all"
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "count_tags:custom_function:num_tags",
+                                        "value": "0"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "customName": "no tags present",
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "customName": "tags present",
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 4,
+                        "functionName": "check_list_length",
+                        "id": "12",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "12",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 1060,
+                    "y": 600
+                },
+                "13": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionId": 3,
+                        "functionName": "code_3",
+                        "id": "13",
+                        "inputParameters": [],
+                        "outputVariables": [],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "13",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    phantom.debug('There are no pending artifacts')\n\n",
+                    "warnings": {},
+                    "x": 640,
+                    "y": 780
+                },
+                "14": {
+                    "data": {
+                        "advanced": {
+                            "join": [],
+                            "refreshNotableData": true
+                        },
+                        "functionId": 4,
+                        "functionName": "remove_tag_4",
+                        "id": "14",
+                        "loop": {
+                            "enabled": false,
+                            "exitAfterUnit": "m",
+                            "exitAfterValue": 10,
+                            "exitConditionEnabled": false,
+                            "exitLoopAfter": 2,
+                            "pauseUnit": "m",
+                            "pauseValue": 2
+                        },
+                        "selectMore": false,
+                        "tab": "apis",
+                        "type": "utility",
+                        "utilities": {
+                            "remove_tags": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "choices": "tags",
+                                        "description": "",
+                                        "label": "tag",
+                                        "name": "tags",
+                                        "placeholder": "Enter tag",
+                                        "renderType": "combobox",
+                                        "required": true
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "remove tag",
+                                "name": "remove_tags",
+                                "refreshNotableData": true
+                            }
+                        },
+                        "utilityType": "api",
+                        "values": {
+                            "remove_tags": {
+                                "_internal": [
+                                    "container",
+                                    "trace"
+                                ],
+                                "tags": "saa_pending"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "14",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 640,
+                    "y": 900
+                },
+                "17": {
+                    "data": {
+                        "advanced": {
+                            "customName": "Count Tags",
+                            "customNameId": 0,
+                            "join": [],
+                            "scope": "all"
+                        },
+                        "functionId": 4,
+                        "functionName": "count_tags",
+                        "id": "17",
+                        "inputParameters": [
+                            "saa_pending"
+                        ],
+                        "outputVariables": [
+                            "num_tags"
+                        ],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "17",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    check_tag = input_parameter_0\n    \n    id_value  = container.get(\"id\", None)\n    base_url  = phantom.build_phantom_rest_url('container')\n    total_url = base_url + '/{0}/artifacts?_filter_tags__contains=\"{1}\"'.format(str(id_value),check_tag)\n    count     = 0\n    \n    response  = phantom.requests.get(total_url, verify=False)\n    phantom.debug(f'response:  {json.dumps(response.json(), indent=4)}')\n    \n    if response.status_code == 200:\n        count = response.json()['count']\n    else:\n        phantom.error(response.text)\n    \n    phantom.debug(f'There are {count} artifacts tagged {check_tag}')\n    count_tags__num_tags = count\n    \n",
+                    "warnings": {},
+                    "x": 980,
+                    "y": 480
+                },
+                "18": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "code_1",
+                        "id": "18",
+                        "inputParameters": [
+                            "count_tags:custom_function:num_tags"
+                        ],
+                        "outputVariables": [],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "18",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    phantom.debug(f'There are {count_tags__num_tags} pending artifacts')\n\n",
+                    "warnings": {},
+                    "x": 1300,
+                    "y": 780
+                },
+                "19": {
+                    "data": {
+                        "advanced": {
+                            "join": [],
+                            "refreshNotableData": true
+                        },
+                        "functionId": 1,
+                        "functionName": "add_tag_1",
+                        "id": "19",
+                        "loop": {
+                            "enabled": false,
+                            "exitAfterUnit": "m",
+                            "exitAfterValue": 10,
+                            "exitConditionEnabled": false,
+                            "exitLoopAfter": 2,
+                            "pauseUnit": "m",
+                            "pauseValue": 2
+                        },
+                        "selectMore": false,
+                        "tab": "apis",
+                        "type": "utility",
+                        "utilities": {
+                            "add_tags": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "choices": "tags",
+                                        "description": "",
+                                        "label": "tag",
+                                        "name": "tags",
+                                        "placeholder": "Enter a tag",
+                                        "renderType": "combobox",
+                                        "required": true
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "add tag",
+                                "name": "add_tags",
+                                "refreshNotableData": true
+                            }
+                        },
+                        "utilityType": "api",
+                        "values": {
+                            "add_tags": {
+                                "_internal": [
+                                    "container",
+                                    "trace"
+                                ],
+                                "tags": "saa_pending"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "19",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 1300,
+                    "y": 880
+                }
+            },
+            "notes": "A container tagged \"saa_pending\" is included in the next interval check of outstanding attack analyzer jobs.",
+            "origin": {
+                "playbook_id": 488,
+                "playbook_name": "Attack Analyzer Update Container Tag",
+                "playbook_repo_id": 3,
+                "playbook_repo_name": "phantom_pb_templates"
+            }
+        },
+        "input_spec": null,
+        "output_spec": null,
+        "playbook_type": "automation",
+        "python_version": "3",
+        "schema": "5.0.11",
+        "version": "6.2.0.355"
+    },
+    "create_time": "2024-02-12T17:19:43.421237+00:00",
+    "draft_mode": false,
+    "labels": [
+        "*"
+    ],
+    "tags": []
+}

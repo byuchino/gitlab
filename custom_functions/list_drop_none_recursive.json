@@ -1,0 +1,26 @@
+{
+    "create_time": "2022-06-01T17:50:58.222779+00:00",
+    "custom_function_id": "10180c17688d0938f4397127c7d5d68968067822",
+    "description": "Will process lists of lists recursively and build a single list of dictionaries with the actual value keyed by \"item\"",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                ""
+            ],
+            "description": "",
+            "input_type": "list",
+            "name": "input_list",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "*.item",
+            "description": ""
+        }
+    ],
+    "platform_version": "5.2.1.78411",
+    "python_version": "3"
+}
